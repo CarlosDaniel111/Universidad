@@ -1,0 +1,101 @@
+TITLE BUBBLE SORT EN ENSAMBLADOR
+.MODEL SMALL
+.STACK 100H
+.DATA
+    ARREGLO DB 9,8,7,6,5,4,3,2,1
+    ARRAY2 DW 5,3,6,9
+.CODE 
+MAIN PROC 
+    MOV AX, @DATA
+    MOV DS,AX
+    
+    LEA BX,ARREGLO
+    MOV CX,9
+    CALL ORDENA
+    
+    
+    
+    
+    LEA BX,ARRAY2
+    MOV CX,4
+    CALL ORDENAWORD
+    
+    MOV DX,[BX][2]
+    OR DX,30H
+    MOV AH,2
+    INT 21H
+    
+    MOV AH,4CH
+    INT 21H
+MAIN ENDP
+
+ORDENA PROC
+    PUSH SI
+    PUSH DI
+    PUSH AX
+    PUSH CX
+    
+    XOR DI,DI
+    DEC CX
+CICLO1:
+    MOV SI,DI
+    INC SI
+    PUSH CX
+CICLO2:
+    MOV AL,[BX][DI]
+    CMP AL,[BX][SI]
+    JGE NEXT
+INTERCAMBIA:
+    MOV AL,[BX][SI]
+    XCHG AL,[BX][DI]
+    MOV [BX][SI],AL
+NEXT:
+    INC SI
+    LOOP CICLO2
+    POP CX
+    INC DI
+    LOOP CICLO1
+    POP CX
+    POP AX
+    POP DI
+    POP SI
+    
+    RET
+ORDENA ENDP
+
+
+ORDENAWORD PROC
+    PUSH SI
+    PUSH DI
+    PUSH AX
+    PUSH CX
+    
+    XOR DI,DI
+    DEC CX
+CICLO1WORD:
+    MOV SI,DI
+    ADD SI,2
+    PUSH CX
+CICLO2WORD:
+    MOV AX,[BX][DI]
+    CMP AX,[BX][SI]
+    JGE NEXTWORD
+INTERCAMBIAWORD:
+    MOV AX,[BX][SI]
+    XCHG AX,[BX][DI]
+    MOV [BX][SI],AX
+NEXTWORD:
+    ADD SI,2
+    LOOP CICLO2WORD
+    POP CX
+    ADD DI,2
+    LOOP CICLO1WORD
+    POP CX
+    POP AX
+    POP DI
+    POP SI
+    
+    RET
+ORDENAWORD ENDP
+
+END MAIN
