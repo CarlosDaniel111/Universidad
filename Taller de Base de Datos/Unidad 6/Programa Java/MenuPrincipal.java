@@ -91,16 +91,14 @@ public class MenuPrincipal extends JFrame implements ActionListener {
             lblError.setVisible(!res);
             btnConsultar.setVisible(res);
             btnCaptura.setVisible(res);
-
-            txtServidor.setEnabled(!res);
-            txtIS.setEnabled(!res);
-            txtBD.setEnabled(!res);
-            txtContra.setEnabled(!res);
-            btnConectar.setEnabled(!res);
             return;
         }
         if(e.getSource() == btnConsultar){
             new Consulta(bd);
+            return;
+        }
+        if(e.getSource() == btnCaptura){
+            new Captura(bd);
             return;
         }
     }

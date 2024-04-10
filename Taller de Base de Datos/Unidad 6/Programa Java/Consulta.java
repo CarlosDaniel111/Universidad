@@ -43,10 +43,6 @@ public class Consulta extends JFrame implements ActionListener {
         lblFamilia.setBounds(30,170,70,20);
         add(lblFamilia);
 
-        lblMensaje = new JLabel("Mensaje");
-        lblMensaje.setBounds(30,205,70,20);
-        lblMensaje.setForeground(Color.red);
-        add(lblMensaje);
 
         // TextField
         txtClave = new JTextField();
@@ -81,7 +77,7 @@ public class Consulta extends JFrame implements ActionListener {
         //Tabla
         String [] cols = {"Articulo ID","Nombre","Descripcion","Precio","Familia ID","Nombre Familia"};
         tabla = new JTable();
-        modelo = new DefaultTableModel();
+        modelo = new DefaultTableModel(){ @Override public boolean isCellEditable(int row, int column) { return false; } };
         modelo.setColumnIdentifiers(cols);
         tabla.setModel(modelo);
         actualizarTabla();

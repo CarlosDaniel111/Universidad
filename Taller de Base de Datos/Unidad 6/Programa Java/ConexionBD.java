@@ -84,4 +84,55 @@ public class ConexionBD {
         }
         return articulos;
     }
+
+    public Vector<Articulo> getAllArticulos(){
+        Vector<Articulo> articulos = new Vector<>();
+        String query = "SELECT * FROM Articulos A INNER JOIN Familias F ON F.famid = A.famid";
+        try {
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                articulos.add(new Articulo(rs.getString("artid"),rs.getString("artnombre"),
+                        rs.getString("artdescripcion"),rs.getString("artprecio"),
+                        rs.getString(5),rs.getString("famnombre")));
+            }
+            st.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return articulos;
+    }
+
+    public String insertarDatos(Articulo articulo){
+        String artId = (articulo.getId().isEmpty() ? "-1" : articulo.getId());
+        String query = "DECLARE @ArtId INT; "+
+                "SELECT @ArtId ="+artId+
+                "; EXEC SP_Articulos @ArtId OUTPUT,'"+articulo.getNombre()+"','"+articulo.getDescripcion()+"',"+articulo.getPrecio()+","+articulo.getFamid()+
+                "; SELECT artid = @ArtId";
+        try {
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            while (rs.next()) {
+                artId = rs.getString("artid");
+            }
+            st.close();
+        } catch (Exception e) {
+            artId = e.getMessage();
+            System.out.println(e.getMessage());
+        }
+        return artId;
+    }
+
+    public boolean borrarTupla(String artid){
+        String query = "DELETE FROM Articulos WHERE artid = "+artid;
+        try {
+            Statement st = connection.createStatement();
+            st.executeQuery(query);
+            st.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+        return true;
+    }
 }
