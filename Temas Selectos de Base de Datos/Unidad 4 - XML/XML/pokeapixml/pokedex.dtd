@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Pokedex (Tipos,Movimientos,Habilidades,ListaPokemon)>
+
+<!ELEMENT Tipos (Tipo+)>
+<!ELEMENT Tipo (NombreTipo,Inmunidad,Resistencia,Debilidad)>
+<!ATTLIST Tipo id ID #REQUIRED>
+<!ELEMENT NombreTipo (#PCDATA)>
+<!ELEMENT Inmunidad (TipoInmune*)>
+<!ELEMENT TipoInmune (#PCDATA)>
+<!ATTLIST TipoInmune id IDREF #REQUIRED>
+<!ELEMENT Resistencia (TipoResistente*)>
+<!ELEMENT TipoResistente (#PCDATA)>
+<!ATTLIST TipoResistente id IDREF #REQUIRED>
+<!ELEMENT Debilidad (TipoDebil*)>
+<!ELEMENT TipoDebil (#PCDATA)>
+<!ATTLIST TipoDebil id IDREF #REQUIRED>
+
+
+<!ELEMENT Movimientos (Movimiento+)>
+<!ELEMENT Movimiento (NombreMovimiento,TipoMovimiento,PP, Potencia, Precision, EfectoMovimiento)>
+<!ATTLIST Movimiento id ID #REQUIRED >
+<!ATTLIST Movimiento Categoria (physical|special|status) "physical">
+<!ELEMENT NombreMovimiento (#PCDATA)>
+<!ELEMENT TipoMovimiento (#PCDATA)>
+<!ATTLIST TipoMovimiento id IDREF #REQUIRED>
+<!ELEMENT PP (#PCDATA)>
+<!ELEMENT Potencia (#PCDATA)>
+<!ELEMENT Precision (#PCDATA)>
+<!ELEMENT EfectoMovimiento (#PCDATA)>
+
+<!ELEMENT Habilidades (Habilidad+)>
+<!ELEMENT Habilidad (NombreHabilidad,EfectoHabilidad)>
+<!ATTLIST Habilidad id ID #REQUIRED>
+<!ELEMENT NombreHabilidad (#PCDATA)>
+<!ELEMENT EfectoHabilidad (#PCDATA)>
+
+<!ELEMENT ListaPokemon (Pokemon+)>
+<!ELEMENT Pokemon (NombrePokemon,Tipo1,Tipo2?,HabilidadesPokemon,Estadisticas,MovimientosPokemon)>
+<!ATTLIST Pokemon id ID #REQUIRED altura CDATA #REQUIRED peso CDATA #REQUIRED>
+
+<!ELEMENT NombrePokemon (#PCDATA)>
+
+<!ELEMENT Tipo1 (#PCDATA)>
+<!ATTLIST Tipo1 id IDREF #REQUIRED>
+<!ELEMENT Tipo2 (#PCDATA)>
+<!ATTLIST Tipo2 id IDREF #REQUIRED>
+
+<!ELEMENT HabilidadesPokemon (HabilidadPokemon*)>
+<!ELEMENT HabilidadPokemon (#PCDATA)>
+<!ATTLIST HabilidadPokemon id IDREF #REQUIRED esOculta (true | false) "false">
+
+<!ELEMENT Estadisticas (Vida,Ataque,Defensa,AtaqueEspecial,DefensaEspecial,Velocidad)>
+<!ELEMENT Vida (#PCDATA)>
+<!ELEMENT Ataque (#PCDATA)>
+<!ELEMENT Defensa (#PCDATA)>
+<!ELEMENT AtaqueEspecial (#PCDATA)>
+<!ELEMENT DefensaEspecial (#PCDATA)>
+<!ELEMENT Velocidad (#PCDATA)>
+<!ELEMENT Altura (#PCDATA)>
+<!ELEMENT Peso (#PCDATA)>
+
+<!ELEMENT MovimientosPokemon (MovimientoPokemon+)>
+<!ELEMENT MovimientoPokemon (#PCDATA)>
+<!ATTLIST MovimientoPokemon id IDREF #REQUIRED>
