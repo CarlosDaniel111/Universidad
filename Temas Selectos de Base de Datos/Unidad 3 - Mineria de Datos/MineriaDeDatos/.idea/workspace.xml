@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="68d4ecb9-ae60-4081-b8dd-ae60e4c7d5dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/BaseDeDatos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejemplo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Generador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProyectoDW/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProyectoDW/.idea/libraries/mssql_jdbc_12_4_2_jre11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProyectoDW/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProyectoDW/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProyectoDW/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProyectoDW/ProyectoDW.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProyectoDW/src/BaseDeDatos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProyectoDW/src/Extractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProyectoDW/src/Rutinas.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2gU4DDHNHJ5EMUcfIftE89xjH7n" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/beltr_2lu48tj/Documents/mssql-jdbc-12.4.2.jre11.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="MineriaDeDatos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-11.0.16-jbr_dcevm-11.0.16-f644763e9732-a11e3e72" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-f644763e9732-c0c073db" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="68d4ecb9-ae60-4081-b8dd-ae60e4c7d5dd" name="Changes" comment="" />
+      <created>1715738705356</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715738705356</updated>
+      <workItem from="1715738706835" duration="7573000" />
+      <workItem from="1715795722879" duration="9383000" />
+      <workItem from="1716261131421" duration="240000" />
+      <workItem from="1716322267756" duration="1523000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
